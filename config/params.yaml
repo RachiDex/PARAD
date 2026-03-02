@@ -1,0 +1,18 @@
+frame_extraction:
+  delta: 0.5  # meters
+  fps: 30
+  velocity: 25  # km/h
+
+preprocessing:
+  target_size: [256, 256]
+  alignment:
+    method: "R-ECC"
+    max_iter: 500
+    epsilon: 1.0e-5
+  segmentation:
+    threshold: 150
+
+autoencoder:
+  threshold: 0.015
+  batch_size: 16
+  epochs: 20
